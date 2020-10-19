@@ -3,7 +3,7 @@ const connectDB = require("./config/db");
 
 const app = express();
 
-// Connect database
+// Connect MongoDB database
 connectDB();
 
 app.get("/", (req, res) => res.send(`The API is running`));

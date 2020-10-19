@@ -1,3 +1,3 @@
 {
-    "mongoURI": "mongodb+srv://chris:DBpassword@dev-cluster.577ye.mongodb.net/<dbname>?retryWrites=true&w=majority"
+    "mongoURI": "mongodb+srv://chris:DBpassword@dev-cluster.oruih.mongodb.net/<dbname>?retryWrites=true&w=majority"
 }
