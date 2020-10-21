@@ -1,10 +1,12 @@
 {
   "name": "dowibook",
   "version": "1.0.0",
-  "private": true,
-  "description": "Wilson-Chris-Donnie's Social Media App",
+  "description": "Social network for developers",
+  "main": "server.js",
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server",
+    "server": "nodemon server"
+    //"start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -13,11 +15,12 @@
     "type": "git",
     "url": "git+https://github.com/christopherjbourque/dowibook.git"
   },
-  "author": "Chris-Wilson-Donnie",
+  "author": "Donnie Alimov, Wilson Birch, Chris Bourque",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/christopherjbourque/dowibook/issues"
   },
+  "homepage": "https://github.com/christopherjbourque/dowibook#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "config": "^3.3.2",
