@@ -1,4 +1,4 @@
-# DoWibook
+# DoWiBook
 
 A cool webdevelopers social media app.
 
