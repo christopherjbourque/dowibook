@@ -1,7 +1,28 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { logout } from '../../actions/auth';
 
- const Navbar = () => {
+const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
+  const authLinks = (
+
+
+  );
+
+  const guestLinks = (
+    <ul>
+        <li>
+          <Link to='profiles.html'>Developers</Link>
+        </li>
+        <li>
+          <Link to='/register'>Register</Link>
+        </li>
+        <li>
+          <Link to='/login'>Login</Link>
+        </li>
+      </ul>
+  )
   return (
     <nav className='navbar bg-dark'>
       <h1>
@@ -23,4 +44,11 @@ import { Link } from "react-router-dom";
     </nav>
   );
 };
-export default Navbar;
+Navbar.propTypes = {
+  logout: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
+};
+const mapStateToProps = (state) => ({
+  aurh: state.auth,
+});
+export default connect(mapStateToProps, { logout })(Navbar);
