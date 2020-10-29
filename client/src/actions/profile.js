@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { setAlert } from './alert';
-
 import { GET_PROFILE, PROFILE_ERROR } from './types';
 
 //Get current users profile
@@ -41,11 +40,11 @@ export const createProfile = (formData, history, edit = false) => async (
 			payload: res.data,
 		});
 
+		//send an alert to the user whether profile was updated or created
 		dispatch(setAlert(edit ? 'Profile Updated' : 'Profile Created', 'success'));
 
-		if (!edit) {
-			history.push('/dashboard');
-		}
+		//send user to dashboard after submit
+		history.push('/dashboard');
 	} catch (err) {
 		const errors = err.response.data.errors;
 
