@@ -1,14 +1,34 @@
-import React, { useEffect } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import Spinner from '../layout/Spinner';
 import { getCurrentProfile } from '../../actions/profile';
 
-const Dashboard = (props) => {
+const Dashboard = ({
+	getCurrentProfile,
+	auth: { user },
+	profile: { profile, loading },
+}) => {
 	useEffect(() => {
 		getCurrentProfile();
 	}, []);
 
-	return <p>Dashboard</p>;
+	//if profile is still loading, show "spinner" for loading state, once profile loaded, return dashboard
+	return loading && profile === null ? (
+		<Spinner />
+	) : (
+		<Fragment>
+			<h1 className='large text-primary'>Dashboard</h1>
+			<p className='lead'>
+				<i className='fas fa-user'></i> Welcome {user && user.name}
+			</p>
+			{profile !== null ? (
+				<Fragment>has </Fragment>
+			) : (
+				<Fragment>has not</Fragment>
+			)}
+		</Fragment>
+	);
 };
 
 Dashboard.propTypes = {
