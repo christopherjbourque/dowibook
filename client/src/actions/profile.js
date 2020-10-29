@@ -63,15 +63,9 @@ export const createProfile = (formData, history, edit = false) => async (
 //Add Experience action, history allows for redirection
 export const addExperience = (formData, history) => async (dispatch) => {
 	try {
-		// config object for sending data
-		const config = {
-			headers: {
-				'Content-Type': 'application/json',
-			},
-		};
 
 		//api/profile/experience route is used for adding expericence to a user, we pass our formData and config
-		const res = await axios.put('/api/profile/experience', formData, config);
+		const res = await axios.put('/api/profile/experience', formData);
 
 		//re-get the profile, to confirm it has been updating
 		dispatch({
