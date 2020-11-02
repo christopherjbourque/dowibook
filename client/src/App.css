@@ -333,7 +333,8 @@ button {
 /* Landing Page */
 .landing {
   position: relative;
-  background: url('./img/showcase.jpg') no-repeat center center/cover;
+  background: url('./img/AdobeStock_81441025.jpeg') no-repeat center
+    center/cover;
   height: 100vh;
 }
 
@@ -452,7 +453,6 @@ button {
   flex: 3;
   flex-basis: 20%;
 }
-
 
 /* Posts Page */
 .post-form .post-form-header {
