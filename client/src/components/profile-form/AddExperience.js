@@ -6,8 +6,8 @@ import { addExperience } from '../../actions/profile';
 
 const AddExperience = ({ addExperience, history }) => {
 	const [formData, setFormData] = useState({
-		company: '',
 		title: '',
+		company: '',
 		location: '',
 		from: '',
 		to: '',
