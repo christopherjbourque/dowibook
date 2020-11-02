@@ -14,7 +14,7 @@ const User = require('../../models/User');
 router.get('/me', auth, async (req, res) => {
 	try {
 		const profile = await Profile.findOne({
-			user: req.user._id,
+			user: req.user.id,
 		}).populate('user', ['name', 'avatar']);
 
 		if (!profile) {
@@ -206,7 +206,7 @@ router.put(
 		try {
 			const profile = await Profile.findOne({ user: req.user.id });
 			profile.experience.unshift(newExp);
-			await profile.save;
+			await profile.save();
 			res.json(profile);
 		} catch (err) {
 			console.error(err.message);
@@ -280,7 +280,7 @@ router.put(
 
 			profile.education.unshift(newEdu);
 
-			await profile.save;
+			await profile.save();
 
 			res.json(profile);
 		} catch (err) {
