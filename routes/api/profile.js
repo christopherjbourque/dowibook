@@ -206,7 +206,7 @@ router.put(
 		try {
 			const profile = await Profile.findOne({ user: req.user.id });
 			profile.experience.unshift(newExp);
-			await profile.save;
+			await profile.save();
 			res.json(profile);
 		} catch (err) {
 			console.error(err.message);
@@ -280,7 +280,7 @@ router.put(
 
 			profile.education.unshift(newEdu);
 
-			await profile.save;
+			await profile.save();
 
 			res.json(profile);
 		} catch (err) {
