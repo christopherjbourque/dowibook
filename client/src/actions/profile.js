@@ -29,9 +29,13 @@ export const getCurrentProfile = () => async (dispatch) => {
 
 //Get profiles of all users in the db
 export const getProfiles = () => async (dispatch) => {
+<<<<<<< HEAD
 	
 	dispatch({ type: CLEAR_PROFILE });
 
+=======
+	dispatch({ type: CLEAR_PROFILE });
+>>>>>>> 586b37f (display all user profiles functionality added)
 	try {
 		const res = await axios.get('/api/profile');
 

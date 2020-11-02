@@ -20,7 +20,11 @@ const ProfileItem = ({
 					{status} {company && <span> at {company} </span>}
 				</p>
 				<p className='my-1'>{location && <span>{location}</span>}</p>
+<<<<<<< HEAD
 				<Link to={`/profile/${_id}`} className='btn btn-primary'>
+=======
+				<Link to={`/profile${_id}`} className='btn btn-primary'>
+>>>>>>> 586b37f (display all user profiles functionality added)
 					View Profile
 				</Link>
 			</div>
