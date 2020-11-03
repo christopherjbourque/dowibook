@@ -29,13 +29,8 @@ export const getCurrentProfile = () => async (dispatch) => {
 
 //Get profiles of all users in the db
 export const getProfiles = () => async (dispatch) => {
-<<<<<<< HEAD
-	
 	dispatch({ type: CLEAR_PROFILE });
 
-=======
-	dispatch({ type: CLEAR_PROFILE });
->>>>>>> 586b37f (display all user profiles functionality added)
 	try {
 		const res = await axios.get('/api/profile');
 
@@ -57,16 +52,7 @@ export const getProfileById = (userId) => async (dispatch) => {
 		const res = await axios.get(`/api/profile/user/${userId}`);
 
 		dispatch({
-<<<<<<< HEAD
-<<<<<<< HEAD
 			type: GET_PROFILE,
-=======
-			type: GET_PROFILES,
->>>>>>> 52d8159 (added remaining profile actions)
-=======
-			type: GET_PROFILE,
->>>>>>> 1099645 (updated developers page and view/ edit profile buttons+functionality)
-			payload: res.data,
 		});
 	} catch (err) {
 		dispatch({

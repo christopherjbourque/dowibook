@@ -11,20 +11,12 @@ import AddExperience from './components/profile-form/AddExperience';
 import AddEducation from './components/profile-form/AddEducation';
 import PrivateRoute from './components/routing/PrivateRoute';
 import Profiles from './components/profiles/Profiles';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Profile from './components/profile/Profile';
-=======
->>>>>>> 586b37f (display all user profiles functionality added)
-=======
-import Profile from './components/profile/Profile';
->>>>>>> 1099645 (updated developers page and view/ edit profile buttons+functionality)
 //Redux
 import { Provider } from 'react-redux';
 import store from './store';
 import { loadUser } from './actions/auth';
 import setAuthToken from './utils/setAuthToken';
-
 import './App.css';
 
 if (localStorage.setAuthToken) {
@@ -46,14 +38,7 @@ const App = () => {
 							<Route exact path='/register' component={Register} />
 							<Route exact path='/login' component={Login} />
 							<Route exact path='/profiles' component={Profiles} />
-<<<<<<< HEAD
-<<<<<<< HEAD
 							<Route exact path='/profile/:id' component={Profile} />
-=======
->>>>>>> 586b37f (display all user profiles functionality added)
-=======
-							<Route exact path='/profile/:id' component={Profile} />
->>>>>>> 1099645 (updated developers page and view/ edit profile buttons+functionality)
 							<PrivateRoute exact path='/dashboard' component={Dashboard} />
 							<PrivateRoute
 								exact
