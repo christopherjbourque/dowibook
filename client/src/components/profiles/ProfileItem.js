@@ -21,10 +21,14 @@ const ProfileItem = ({
 				</p>
 				<p className='my-1'>{location && <span>{location}</span>}</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 				<Link to={`/profile/${_id}`} className='btn btn-primary'>
 =======
 				<Link to={`/profile${_id}`} className='btn btn-primary'>
 >>>>>>> 586b37f (display all user profiles functionality added)
+=======
+				<Link to={`/profile/${_id}`} className='btn btn-primary'>
+>>>>>>> 1099645 (updated developers page and view/ edit profile buttons+functionality)
 					View Profile
 				</Link>
 			</div>

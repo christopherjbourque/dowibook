@@ -58,10 +58,14 @@ export const getProfileById = (userId) => async (dispatch) => {
 
 		dispatch({
 <<<<<<< HEAD
+<<<<<<< HEAD
 			type: GET_PROFILE,
 =======
 			type: GET_PROFILES,
 >>>>>>> 52d8159 (added remaining profile actions)
+=======
+			type: GET_PROFILE,
+>>>>>>> 1099645 (updated developers page and view/ edit profile buttons+functionality)
 			payload: res.data,
 		});
 	} catch (err) {
