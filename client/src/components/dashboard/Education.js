@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { deleteEducation } from '../../actions/profile';
 
 const Education = ({ education, deleteEducation }) => {
+	//map educations
 	const educations = education.map((edu) => (
 		<tr key={edu._id}>
 			<td>{edu.school}</td>
