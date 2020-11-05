@@ -504,6 +504,14 @@ button {
 	margin-bottom: 5px;
 }
 
+.playlistRow,
+.controlRow {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin-bottom: 5px;
+}
+
 /* Mobile Styles */
 @media (max-width: 700px) {
 	.container {
