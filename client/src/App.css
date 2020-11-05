@@ -1,7 +1,9 @@
 /* Global Styles */
+@import url('https://fonts.googleapis.com/css?family=Alata');
+
 :root {
-	--primary-color: #17a2b8;
-	--dark-color: #343a40;
+	--primary-color: #43b0f1;
+	--dark-color: #1e3d58;
 	--light-color: #f4f4f4;
 	--danger-color: #dc3545;
 	--success-color: #28a745;
@@ -14,7 +16,7 @@
 }
 
 body {
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Alata', sans-serif;
 	font-size: 1rem;
 	line-height: 1.6;
 	background-color: #fff;
