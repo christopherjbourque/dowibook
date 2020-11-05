@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { logout } from '../../actions/auth';
-import SCplayer from '../music/SCPlayer';
-import SCPlayer from '../music/SCPlayer';
 
 const Navbar = ({ auth: { isAuthenticated }, logout }) => {
 	const authLinks = (

@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Landing from './components/layout/Landing';
@@ -10,14 +10,13 @@ import ProfileForm from './components/profile-form/ProfileForm';
 import AddExperience from './components/profile-form/AddExperience';
 import AddEducation from './components/profile-form/AddEducation';
 import Posts from './components/posts/Posts';
-import Post from './components/post/Post';
 import PrivateRoute from './components/routing/PrivateRoute';
 import Profiles from './components/profiles/Profiles';
 import Profile from './components/profile/Profile';
 //Redux
 import { Provider } from 'react-redux';
 import store from './store';
-import { loadUser, login } from './actions/auth';
+import { loadUser } from './actions/auth';
 import setAuthToken from './utils/setAuthToken';
 import './App.css';
 import SCPlayer from './components/music/SCPlayer';
