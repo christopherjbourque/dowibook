@@ -10,6 +10,7 @@ import ProfileForm from './components/profile-form/ProfileForm';
 import AddExperience from './components/profile-form/AddExperience';
 import AddEducation from './components/profile-form/AddEducation';
 import Posts from './components/posts/Posts';
+import Post from './components/post/Post';
 import PrivateRoute from './components/routing/PrivateRoute';
 import Profiles from './components/profiles/Profiles';
 import Profile from './components/profile/Profile';
@@ -28,7 +29,6 @@ const App = () => {
 	useEffect(() => {
 		store.dispatch(loadUser());
 	}, []);
-
 	return (
 		<Provider store={store}>
 			<Router>
@@ -41,7 +41,7 @@ const App = () => {
 						<Switch>
 							<Route exact path='/register' component={Register} />
 							<Route exact path='/login' component={Login} />
-							<Route exact path='/profiles' component={Profiles} />
+							<PrivateRoute exact path='/profiles' component={Profiles} />
 							<Route exact path='/profile/:id' component={Profile} />
 							<PrivateRoute exact path='/dashboard' component={Dashboard} />
 							<PrivateRoute
@@ -49,6 +49,11 @@ const App = () => {
 								path='/create-profile'
 								component={ProfileForm}
 							/>
+							{/* <PrivateRoute
+                exact
+                path='/edit-profile'
+                component={ProfileForm}
+              /> */}
 							<PrivateRoute
 								exact
 								path='/add-experience'
@@ -60,6 +65,7 @@ const App = () => {
 								component={AddEducation}
 							/>
 							<PrivateRoute exact path='/posts' component={Posts} />
+							<PrivateRoute exact path='/posts/:id' component={Post} />
 						</Switch>
 					</section>
 				</Fragment>
